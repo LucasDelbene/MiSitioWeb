@@ -11,30 +11,6 @@ body{
 	font-family: 'Amatic SC', cursive;
 }
 
-/*TITULO y PARRAFO PRINCIPAL*/
-.seccionPrincipal{
-	display:flex;
-	flex-direction:column;
-	align-items:center;
-	justify-content:center;
-	height:calc(100vh - 80px);
-}
-.seccionPrincipal img{
-	border-radius: 50%;
-	height: 325px;
-	width: 340px;
-}
-.seccionPrincipal h1{
-	font-size:80px;
-	margin-top: 250px;
-}
-.seccionPrincipal p{
-	font-size:30px;
-	text-transform:uppercase;
-	color:black;
-	margin-top:25px;
-}
-
 /*SLIDER SECCION PRINCIPAL*/
 .position{
     position: absolute;
@@ -90,6 +66,30 @@ body{
 		background-attachment: fixed;
 		background-size: cover;
     }
+}
+
+/*TITULO y PARRAFO PRINCIPAL*/
+.seccionPrincipal{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	height:calc(100vh - 80px);
+}
+.seccionPrincipal img{
+	border-radius: 50%;
+	height: 325px;
+	width: 340px;
+}
+.seccionPrincipal h1{
+	font-size:80px;
+	margin-top: 250px;
+}
+.seccionPrincipal p{
+	font-size:30px;
+	text-transform:uppercase;
+	color:black;
+	margin-top:25px;
 }
 
 /*MENU DE NAVEGACION*/
@@ -278,15 +278,282 @@ img{
     background: #1CCC5B;
 }
 
+
+
 /*ESTILOS PARA HACERLO RESPONSIVE*/
-@media screen and (max-width:800px){
-	nav a{
-		font-size: 14px;
-		padding: 5px;
+@media(max-width:768px){
+	/*BODY*/
+	body{
+		background:#f2f2f2;
+		font-family: 'Amatic SC', cursive;	
 	}
-}
-@media screen and (max-width:450px){
-	nav a{
-		font-size: 12px;
+
+	/*SLIDER SECCION PRINCIPAL*/
+	.position{
+		position: absolute;
+ 	    transform: translate(-50%,-50%);
 	}
+	.sliderPresentacion{
+		background-image: url(../img/Presentacion/FotoPresentacionUno.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		background-size: cover;
+	
+		animation: animate 15s infinite;
+		border-radius: 100%;
+		height: 325px;
+		width: 340px;
+		margin: 155px 70px;
+		border: solid black 5px;
+	}
+	@keyframes animate{
+		20%{
+			background-image: url(../img/Presentacion/FotoPresentacionCinco.jpg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+		40%{
+			background-image: url(../img/Presentacion/FotoPresentacionCuatro.jpg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+		60%{
+			background-image: url(../img/Presentacion/FotoPresentacionTres.jpg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+		80%{
+			background-image: url(../img/Presentacion/FotoPresentacionDos.jpg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+		100%{
+			background-image: url(../img/Presentacion/FotoPresentacionUno.jpg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+	}
+
+	/*TITULO y PARRAFO PRINCIPAL*/
+	.seccionPrincipal{
+		display:flex;
+    	flex-direction:column;
+    	align-items:center;
+    	justify-content:center;
+    	height:calc(100vh - 80px);	
+	}
+    .seccionPrincipal img{
+		border-radius: 50%;
+		height: 325px;
+		width: 340px;
+    }
+    .seccionPrincipal h1{
+    	font-size:70px;
+    	margin-top: 390px;
+		margin-left: 130px;
+    }
+    .seccionPrincipal p{
+    	text-transform:uppercase;
+    	color:black;
+		font-size:25px;
+    	margin-top:25px;
+		margin-left: 130px;
+    }
+
+	/*MENU DE NAVEGACION*/
+    .menuDeNavegacion{
+    	background: #fff;
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    	height: 80px;
+		width: 910px;
+		margin-top: 110px;
+    	display: flex;
+    	position: sticky;
+    	overflow: hidden;
+    }
+    .menuDeNavegacion a{
+    	flex: 1;
+    	height: 100%;
+    	text-transform: uppercase;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    	color: #000;
+    	transition: .2s ease-in-out all;
+    	font-weight: 500;
+    	text-decoration: none;
+    }
+    .menuDeNavegacion a:hover{
+    	background: #f0f0f0;
+    }
+    .menuDeNavegacion .indicadorMenu{
+    	width: 0px;
+    	height: 7px;
+    	background: black;
+    	position: absolute;
+    	bottom: 0;
+    	transition: .3s ease-out all;	
+    }
+
+	/*SECCIONES*/
+    .seccion{
+    	min-height: 100vh;
+    	max-width: 800px;
+    	width: 90%;
+    	margin: auto;
+    
+    	padding-top: 120px;
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	justify-content: center;
+    }
+    .seccion .cardSeccion{
+    	background: #fff;
+    	height: 90%;
+    	padding: 100px 100px 100px 100px;
+    	border-radius: 10px;
+    	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+    	border: solid black;
+    	border-radius: 10px;
+    }
+    .seccion h1{
+    	font-size: 48px;
+    	margin-bottom: 20px;
+    	text-align: center;
+    }
+    .seccion p{
+    	line-height: 38px;
+    	margin-bottom: 40px;
+    	color: #494949;
+    	font-size: 20px;
+    }
+    .seccion img{
+    	width: 100%;
+    	vertical-align: top;
+    	margin-bottom: 20px;
+    }
+
+	/*SECCION CERTIFICADOS*/
+    .contenedorCertificados{
+        max-width: 1000px;
+        height: 500px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px;
+    }
+    .tituloCertificados{
+    	padding-bottom: 100px;
+    }
+    input[type=radio]{
+        display: none;
+    }
+    .contenedor{
+        width: 2000px;
+        height: 100%;
+        max-height: 600px;
+        transform-style: preserve-3d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    	padding-bottom: 600px;
+    }
+    .cards{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .card{
+        position: absolute;
+        width: 750px;
+        height: 550px;
+    	left: 115px;
+        margin: auto;
+        cursor: pointer;
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        -o-object-fit: cover;
+        object-fit: cover;
+    	justify-content: right;
+    }
+	#imagenDos:checked ~ .cards #selectorUno,
+    #imagenUno:checked ~ .cards #selectorTres,
+    #imagenTres:checked ~ .cards #selectorDos{
+        transform: translateX(-40%) scale(0.8);
+        z-index: 0;
+    }
+    #imagenTres:checked ~ .cards #selectorUno,
+    #imagenUno:checked ~ .cards #selectorDos,
+    #imagenDos:checked ~ .cards #selectorTres{
+        transform: translateX(40%) scale(0.8);
+        z-index: 0;
+    }
+    #imagenUno:checked ~ .cards #selectorUno,
+    #imagenDos:checked ~ .cards #selectorDos,
+    #imagenTres:checked ~ .cards #selectorTres{
+        transform: translateX(0) scale(1);
+        z-index: 1;
+    }
+
+	/*SECCION REDES SOCIALES*/
+    .contenedorRedesSociales{
+        width: 1000px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    	margin: 100px;
+    }
+    .contenedorRedesSociales .fab{
+        margin: 0 15px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        background: #000;
+        border-radius: 50%;
+        color: white;
+        cursor: pointer;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+    .contenedorRedesSociales .iconoFacebook:hover{
+        background: #3b5998;
+    }
+    .contenedorRedesSociales .iconoTwitter:hover{
+        background: #00acee;
+    }
+    .contenedorRedesSociales .iconoInstagram:hover{
+        background: #C13584;
+    }
+    .contenedorRedesSociales .iconoLinkedin:hover{
+        background: #0D709F;
+    }
+    .contenedorRedesSociales .iconoWhatsapp:hover{
+        background: #1ACC3E;
+    }
+    .contenedorRedesSociales .iconoYoutube:hover{
+        background: #F20000;
+    }
+    .contenedorRedesSociales .iconoSpotify:hover{
+        background: #1CCC5B;
+    }
 }
