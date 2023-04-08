@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- CONFIGURACION HTML -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- CONFIGURACION GOOGLE FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+
+	<!-- TITULO DEL SITIO WEB -->
+	<title>Sitio Web Lucas Delbene</title>
+
+	<!-- CONEXION A LOS ESTILOS CSS -->
+	<link rel="stylesheet" href="./src/css/estilos.css">
+
+	<!-- CONFIGURACION FONTAWESOME PARA USAR ICONOS -->
+	<script src="https://kit.fontawesome.com/712575d4a5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div id="seccionPrincipal" class="seccionPrincipal">
+		<div class="contenedorSliderPresentacion">
+			<div class="sliderPresentacion position"></div>
+		</div>
+
+		<h1>LUCAS DELBENE</h1>
+		<p>BIENVENIDOS A MI SITIO WEB</p>
+	</div>
+
+	<nav id="menuDeNavegacion" class="menuDeNavegacion">
+		<a href="#1" class="enlaceMenu">BIOGRAFIA</a>
+		<a href="#2" class="enlaceMenu">CERTIFICADOS</a>
+		<a href="#3" class="enlaceMenu">HOBBIES</a>
+		<a href="#4" class="enlaceMenu">REDES SOCIALES</a>
+		<span id="indicadorMenu" class="indicadorMenu"></span>
+	</nav>
+
+	<div class="secciones">
+		<div class="seccion" id="1">
+			<div class="cardSeccion">
+				<h1>BIOGRAFIA</h1>
+				<p></p>
+			</div>
+		</div>
+
+		<div class="seccion" id="2">
+			<div class="cardSeccion">
+				<h1 class="tituloCertificados">CERTIFICADOS</h1>
+
+				<div class="contenedorCertificados">
+					<div class="contenedor">
+						<input type="radio" name="slider" id="imagenUno" checked>
+						<input type="radio" name="slider" id="imagenDos">
+						<input type="radio" name="slider" id="imagenTres">
+			
+						<div class="cards">
+							<label class="card" for="imagenUno" id="selectorUno">
+								<img src="src/img/Certificados/CertificadoDesarrolloWeb.png">
+							</label>
+							<label class="card" for="imagenDos" id="selectorDos">
+								<img src="src/img/Certificados/CertificadoJavaScript.png">
+							</label>
+							<label class="card" for="imagenTres" id="selectorTres">
+								<img src="src/img/Certificados/CertificadoReactJs.png">
+							</label>
+						</div>
+					</div>
+			
+				</div>
+			</div>
+		</div>
+
+		<div class="seccion" id="3">
+			<div class="cardSeccion">
+				<h1>HOBBIES</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet ante mattis, lacinia arcu nec, consequat massa. Aliquam faucibus quam eget justo posuere vehicula. Donec ac fermentum dolor, rhoncus congue sapien. Maecenas lacinia tellus nec turpis tempor pellentesque. Praesent in erat a nisl viverra dapibus. Pellentesque feugiat dolor quis sapien rutrum, sed placerat est volutpat. Curabitur sed convallis lacus, vel molestie ante. </p>
+			</div>
+		</div>
+
+		<div class="seccion" id="4">
+			<div class="cardSeccion">
+				<h1>REDES SOCIALES</h1>
+
+				<div class="contenedorRedesSociales">
+					<a href="https://wa.link/l2j4av"> <i class="fab fa-whatsapp iconoWhatsapp"></i> </a>
+					<a href="https://www.instagram.com/lucasdlbn/"> <i class="fab fa-instagram iconoInstagram"></i> </a>
+					<a href="https://www.linkedin.com/in/lucas-delbene-25913122a/"> <i class="fab fa-linkedin iconoLinkedin"></i> </a> 
+					<a href="https://twitter.com/lucasdlbn"> <i class="fab fa-twitter iconoTwitter"></i> </a> 
+					<a href="https://www.facebook.com/Lucasdlbn"> <i class="fab fa-facebook-f iconoFacebook"></i> </a> 
+					<a href="https://www.tiktok.com/@lucasdlbn"> <i class="fab fa-tiktok iconoTikTok"></i> </a> 
+					<a href="https://www.youtube.com/channel/UCQMlG-o1Xxmuv2ZICXrX0gw"> <i class="fab fa-youtube iconoYoutube"></i> </a>
+					<a href="https://open.spotify.com/user/212pcqm3iqokg76wjtdp2zfbi?si=0099f914646c4530"> <i class="fab fa-spotify iconoSpotify"></i> </a>					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="./src/js/app.js"></script>
+</body>
+</html>
